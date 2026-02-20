@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RaniWebSolution Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600&family=Syne:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <header class="admin-header">
+      <div>
+        <h1>RaniWebSolution Admin</h1>
+        <p>Client performance, payments, and lead history.</p>
+      </div>
+      <button id="refreshBtn" class="btn">Refresh</button>
+    </header>
+
+    <section class="summary">
+      <div class="card">
+        <h3>Total Leads</h3>
+        <p id="leadCount">0</p>
+      </div>
+      <div class="card">
+        <h3>Payments Total</h3>
+        <p id="paymentCount">0</p>
+      </div>
+      <div class="card">
+        <h3>Payments Success</h3>
+        <p id="paymentSuccess">0</p>
+      </div>
+      <div class="card">
+        <h3>Payments Pending</h3>
+        <p id="paymentPending">0</p>
+      </div>
+      <div class="card">
+        <h3>Payments Failed</h3>
+        <p id="paymentFailed">0</p>
+      </div>
+      <div class="card">
+        <h3>Revenue</h3>
+        <p id="revenueTotal">0</p>
+      </div>
+    </section>
+
+    <section class="tables">
+      <div class="table-card">
+        <div class="table-head">
+          <h2>Recent Leads</h2>
+          <span class="muted">Latest 100 entries</span>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Business</th>
+              <th>Rating</th>
+              <th>Source</th>
+            </tr>
+          </thead>
+          <tbody id="leadsBody"></tbody>
+        </table>
+      </div>
+
+      <div class="table-card">
+        <div class="table-head">
+          <h2>Recent Payments</h2>
+          <span class="muted">Latest 100 entries</span>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Plan</th>
+              <th>Amount</th>
+              <th>Status</th>
+              <th>Order ID</th>
+            </tr>
+          </thead>
+          <tbody id="paymentsBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <script src="admin.js"></script>
+  </body>
+</html>
